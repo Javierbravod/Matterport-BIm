@@ -119,9 +119,15 @@ module.exports = function (config) {
           test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
         },
+        {
+          test: /\.(glb|gltf)$/,
+          type: 'asset/resource',
+        },
       ],
     },
-    plugins: computePlugins(),
+    plugins: [
+      ...computePlugins(),
+    ],
     devServer: {
       port: 7000,
       static: path.join(__dirname, 'dist'),

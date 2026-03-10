@@ -4,6 +4,9 @@ import { clearMesssage, connect, setMessage } from '../common';
 import '../common/main.css';
 import sourceDescs from './sources.json';
 
+// @ts-ignore
+import logoGlbUrl from './LogoMinversocompleto.glb';
+
 // ── Checklist data ────────────────────────────────────────────────
 interface StepData {
   title: string;
@@ -71,7 +74,7 @@ const STEPS: Record<string, StepData> = {
 // ── Custom Panel helpers ──────────────────────────────────────────
 function openCustomPanel(stepKey: string): void {
   const panel = document.getElementById('custom-panel');
-  const body  = document.getElementById('custom-panel-body');
+  const body = document.getElementById('custom-panel-body');
   const titleEl = document.getElementById('custom-panel-title');
   if (!panel || !body || !titleEl) return;
 
@@ -130,13 +133,48 @@ const main = async () => {
     attachments: [minversoSandboxId],
   });
 
+  // ── GLTF Loader (Logo Minverso) ──────────────────────────────────
+  console.log('Ruta del GLB:', logoGlbUrl);
+  try {
+    const lights = await (sdk as any).Scene.createNode();
+    lights.addComponent('mp.lights');
+    lights.start();
+
+    const escalaLogo = 1; // Ajustar si es necesario
+    const logoNode = await (sdk as any).Scene.createNode();
+    logoNode.addComponent('mp.gltfLoader', {
+      url: logoGlbUrl,
+      visible: true,
+      localScale: {
+        x: escalaLogo,
+        y: escalaLogo,
+        z: escalaLogo,
+      },
+      localPosition: {
+        x: -15.7867424677556,
+        y: 1.5,
+        z: -2.4394758542096553,
+      },
+      localRotation: {
+        x: 0,
+        y: 180.7,
+        z: 0,
+      },
+    });
+    logoNode.start();
+    console.log('Nodo del logo cargado:', logoNode);
+    console.log('GLB Logo loaded at specified coordinates');
+  } catch (error) {
+    console.error('Error loading GLB:', error);
+  }
+
   // ── Tags de pasos (sin sandbox — el panel custom los maneja) ──
   const tagIds: Record<string, string> = {};
 
   const [id1] = await sdk.Tag.add({
     label: 'Paso 1: Notificación',
-    anchorPosition: { x: -20.1439173752873, y: 1.405418092471173, z: 1.722705161011619 },
-    stemVector: { x: 0.3, y: 0, z: 0 },
+    anchorPosition: { x: -20.1439173752873, y: 1.26, z: 1.722705161011619 },
+    stemVector: { x: 0.06, y: 0, z: 0 },
     color: { r: 1.0, g: 0.596, b: 0.0 },
     iconId: 'public_characters_1',
   });
@@ -144,8 +182,8 @@ const main = async () => {
 
   const [id2] = await sdk.Tag.add({
     label: 'Paso 2: Identificación',
-    anchorPosition: { x: -18.9632054059643, y: 1.230397616938383, z: -2.285493963118637 },
-    stemVector: { x: 0, y: 0, z: 0.3 },
+    anchorPosition: { x: -18.9632054059643, y: 1.26, z: -2.285493963118637 },
+    stemVector: { x: 0, y: 0, z: 0.06 },
     color: { r: 0.012, g: 0.663, b: 0.957 },
     iconId: 'public_characters_2',
   });
@@ -153,8 +191,8 @@ const main = async () => {
 
   const [id3] = await sdk.Tag.add({
     label: 'Paso 3: Aislamiento',
-    anchorPosition: { x: -18.034426838887985, y: 1.222983537795993, z: -2.281127506949742 },
-    stemVector: { x: 0, y: 0, z: 0.3 },
+    anchorPosition: { x: -18.034426838887985, y: 1.26, z: -2.281127506949742 },
+    stemVector: { x: 0, y: 0, z: 0.06 },
     color: { r: 0.957, g: 0.263, b: 0.212 },
     iconId: 'public_characters_3',
   });
@@ -162,8 +200,8 @@ const main = async () => {
 
   const [id4] = await sdk.Tag.add({
     label: 'Paso 4: Recolección y Etiquetas',
-    anchorPosition: { x: -12.623932290521346, y: 0.867121838449943, z: -2.625850974736056 },
-    stemVector: { x: -0.3, y: 0, z: 0 },
+    anchorPosition: { x: -12.623932290521346, y: 1.26, z: -2.625850974736056 },
+    stemVector: { x: -0.06, y: 0, z: 0 },
     color: { r: 0.945, g: 0.769, b: 0.059 },
     iconId: 'public_characters_4',
   });
@@ -171,26 +209,38 @@ const main = async () => {
 
   const [id5] = await sdk.Tag.add({
     label: 'Paso 5: Bloqueo y Etiquetado',
-    anchorPosition: { x: -17.48982384704301, y: 1.2687677861740818, z: -2.3042635948142762 },
-    stemVector: { x: 0, y: 0, z: 0.3 },
+    anchorPosition: { x: -17.48982384704301, y: 1.26, z: -2.3042635948142762 },
+    stemVector: { x: 0, y: 0, z: 0.06 },
     color: { r: 0.298, g: 0.686, b: 0.314 },
     iconId: 'public_characters_5',
   });
   tagIds[id5] = 'paso-5';
 
-  // Listen for tag open events → show custom dark panel
+  [id1, id2, id3, id4, id5].forEach(id => {
+    sdk.Tag.allowAction(id, { docking: false });
+  });
+
+  // Listen for tag selection events → show custom dark panel
+  let prevSelected: string | null = null;
   sdk.Tag.openTags.subscribe({
-    onChanged(openTagIds) {
-      if (openTagIds.size === 0) {
+    onChanged(state: any) {
+      // state.selected is a Set<string>
+      const selected: Set<string> = state.selected;
+      const iter = selected ? selected.values() : [][Symbol.iterator]();
+      const first = iter.next();
+      const selectedId: string | null = first.done ? null : first.value;
+
+      if (selectedId === prevSelected) return;
+      prevSelected = selectedId;
+
+      if (!selectedId) {
         closeCustomPanel();
         return;
       }
-      for (const openId of openTagIds) {
-        const stepKey = tagIds[openId];
-        if (stepKey) {
-          openCustomPanel(stepKey);
-          return;
-        }
+
+      const stepKey = tagIds[selectedId];
+      if (stepKey) {
+        openCustomPanel(stepKey);
       }
     },
   });
