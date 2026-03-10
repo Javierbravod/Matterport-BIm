@@ -1,0 +1,5 @@
+{
+  "buildCommand": "yarn clean-install && yarn build-all-prod",
+  "outputDirectory": "packages/embed-examples/dist",
+  "installCommand": "yarn install"
+}
