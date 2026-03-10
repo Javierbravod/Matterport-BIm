@@ -40,31 +40,14 @@ const main = async () => {
 
   // PASO 1
   const htmlChecklistPaso1 = `
-  <style>html, body { margin: 0; padding: 0; background-color: #222222; overflow: hidden; height: 100%; }</style>
-  <div style="font-family: Arial, sans-serif; padding: 20px; color: white; background-color: #222222; height: 100%; box-sizing: border-box; overflow-y: auto;">
-    <h2 style="margin-top: 0; border-bottom: 2px solid #ffaa00; padding-bottom: 10px; font-size: 20px;">
-      📋 Paso 1: Notificación y Autorización
-    </h2>
-    <p style="font-size: 13px; color: #cccccc; margin-bottom: 15px; font-style: italic;">
-      Objetivo: Asegurar que el área sabe que el equipo se va a detener.
-    </p>
-    <form style="font-size: 14px; line-height: 1.5;">
-      <label style="display: block; margin-bottom: 10px; cursor: pointer;">
-        <input type="checkbox" style="transform: scale(1.2); margin-right: 8px; vertical-align: middle;"> 
-        <strong>Identificar equipo:</strong> Confirmar visualmente el equipo a intervenir (ej. Molino SAC 3).
-      </label>
-      <label style="display: block; margin-bottom: 10px; cursor: pointer;">
-        <input type="checkbox" style="transform: scale(1.2); margin-right: 8px; vertical-align: middle;"> 
-        <strong>Tomar equipo de comunicación:</strong> Interactuar con la radio en la mesa de inicio.
-      </label>
-      <label style="display: block; margin-bottom: 10px; cursor: pointer;">
-        <input type="checkbox" style="transform: scale(1.2); margin-right: 8px; vertical-align: middle;"> 
-        <strong>Contactar al encargado:</strong> Solicitar por radio la detención operativa del equipo.
-      </label>
-      <label style="display: block; margin-bottom: 10px; cursor: pointer;">
-        <input type="checkbox" style="transform: scale(1.2); margin-right: 8px; vertical-align: middle;"> 
-        <strong>Recibir autorización:</strong> Escuchar la confirmación de detención por parte del jefe de turno antes de avanzar.
-      </label>
+  <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background-color:#222222;font-family:Arial,sans-serif;color:white;padding:20px;box-sizing:border-box;overflow-y:auto;">
+    <h2 style="margin-top:0;border-bottom:2px solid #ffaa00;padding-bottom:10px;font-size:20px;">📋 Paso 1: Notificación y Autorización</h2>
+    <p style="font-size:13px;color:#cccccc;margin-bottom:15px;font-style:italic;">Objetivo: Asegurar que el área sabe que el equipo se va a detener.</p>
+    <form style="font-size:14px;line-height:1.8;">
+      <label style="display:block;margin-bottom:10px;cursor:pointer;"><input type="checkbox" style="transform:scale(1.2);margin-right:8px;vertical-align:middle;"> <strong>Identificar equipo:</strong> Confirmar visualmente el equipo a intervenir (ej. Molino SAC 3).</label>
+      <label style="display:block;margin-bottom:10px;cursor:pointer;"><input type="checkbox" style="transform:scale(1.2);margin-right:8px;vertical-align:middle;"> <strong>Tomar equipo de comunicación:</strong> Interactuar con la radio en la mesa de inicio.</label>
+      <label style="display:block;margin-bottom:10px;cursor:pointer;"><input type="checkbox" style="transform:scale(1.2);margin-right:8px;vertical-align:middle;"> <strong>Contactar al encargado:</strong> Solicitar por radio la detención operativa del equipo.</label>
+      <label style="display:block;margin-bottom:10px;cursor:pointer;"><input type="checkbox" style="transform:scale(1.2);margin-right:8px;vertical-align:middle;"> <strong>Recibir autorización:</strong> Escuchar la confirmación de detención por parte del jefe de turno antes de avanzar.</label>
     </form>
   </div>
   `;
@@ -79,27 +62,13 @@ const main = async () => {
   });
   // PASO 2
   const htmlChecklistPaso2 = `
-  <style>html, body { margin: 0; padding: 0; background-color: #222222; overflow: hidden; height: 100%; }</style>
-  <div style="font-family: Arial, sans-serif; padding: 20px; color: white; background-color: #222222; height: 100%; box-sizing: border-box; overflow-y: auto;">
-    <h2 style="margin-top: 0; border-bottom: 2px solid #00aaff; padding-bottom: 10px; font-size: 20px;">
-      📋 Paso 2: Identificación de Fuentes de Energía
-    </h2>
-    <p style="font-size: 13px; color: #cccccc; margin-bottom: 15px; font-style: italic;">
-      Objetivo: Encontrar el punto exacto donde se debe cortar la energía.
-    </p>
-    <form style="font-size: 14px; line-height: 1.5;">
-      <label style="display: block; margin-bottom: 10px; cursor: pointer;">
-        <input type="checkbox" style="transform: scale(1.2); margin-right: 8px; vertical-align: middle;"> 
-        <strong>Navegar a la sala eléctrica:</strong> Dirigirse al área de tableros.
-      </label>
-      <label style="display: block; margin-bottom: 10px; cursor: pointer;">
-        <input type="checkbox" style="transform: scale(1.2); margin-right: 8px; vertical-align: middle;"> 
-        <strong>Localizar tablero general:</strong> Identificar el panel principal que alimenta el equipo.
-      </label>
-      <label style="display: block; margin-bottom: 10px; cursor: pointer;">
-        <input type="checkbox" style="transform: scale(1.2); margin-right: 8px; vertical-align: middle;"> 
-        <strong>Ubicar el interruptor específico:</strong> Leer las etiquetas del tablero para encontrar la palanca exacta que corresponde al equipo a intervenir.
-      </label>
+  <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background-color:#222222;font-family:Arial,sans-serif;color:white;padding:20px;box-sizing:border-box;overflow-y:auto;">
+    <h2 style="margin-top:0;border-bottom:2px solid #00aaff;padding-bottom:10px;font-size:20px;">📋 Paso 2: Identificación de Fuentes de Energía</h2>
+    <p style="font-size:13px;color:#cccccc;margin-bottom:15px;font-style:italic;">Objetivo: Encontrar el punto exacto donde se debe cortar la energía.</p>
+    <form style="font-size:14px;line-height:1.8;">
+      <label style="display:block;margin-bottom:10px;cursor:pointer;"><input type="checkbox" style="transform:scale(1.2);margin-right:8px;vertical-align:middle;"> <strong>Navegar a la sala eléctrica:</strong> Dirigirse al área de tableros.</label>
+      <label style="display:block;margin-bottom:10px;cursor:pointer;"><input type="checkbox" style="transform:scale(1.2);margin-right:8px;vertical-align:middle;"> <strong>Localizar tablero general:</strong> Identificar el panel principal que alimenta el equipo.</label>
+      <label style="display:block;margin-bottom:10px;cursor:pointer;"><input type="checkbox" style="transform:scale(1.2);margin-right:8px;vertical-align:middle;"> <strong>Ubicar el interruptor específico:</strong> Leer las etiquetas del tablero para encontrar la palanca exacta que corresponde al equipo a intervenir.</label>
     </form>
   </div>
   `;
@@ -114,27 +83,13 @@ const main = async () => {
   });
   // PASO 3
   const htmlChecklistPaso3 = `
-  <style>html, body { margin: 0; padding: 0; background-color: #222222; overflow: hidden; height: 100%; }</style>
-  <div style="font-family: Arial, sans-serif; padding: 20px; color: white; background-color: #222222; height: 100%; box-sizing: border-box; overflow-y: auto;">
-    <h2 style="margin-top: 0; border-bottom: 2px solid #ff4444; padding-bottom: 10px; font-size: 20px;">
-      📋 Paso 3: Aislamiento
-    </h2>
-    <p style="font-size: 13px; color: #cccccc; margin-bottom: 15px; font-style: italic;">
-      Objetivo: Cortar físicamente el flujo de energía.
-    </p>
-    <form style="font-size: 14px; line-height: 1.5;">
-      <label style="display: block; margin-bottom: 10px; cursor: pointer;">
-        <input type="checkbox" style="transform: scale(1.2); margin-right: 8px; vertical-align: middle;"> 
-        <strong>Posicionamiento:</strong> Situarse frente al interruptor identificado en el paso anterior.
-      </label>
-      <label style="display: block; margin-bottom: 10px; cursor: pointer;">
-        <input type="checkbox" style="transform: scale(1.2); margin-right: 8px; vertical-align: middle;"> 
-        <strong>Accionar mecanismo:</strong> Bajar la palanca o girar el interruptor a la posición de apagado ("OFF").
-      </label>
-      <label style="display: block; margin-bottom: 10px; cursor: pointer;">
-        <input type="checkbox" style="transform: scale(1.2); margin-right: 8px; vertical-align: middle;"> 
-        <strong>Confirmación sensorial:</strong> Validar el corte mediante el feedback visual (luces apagadas) y auditivo (sonido del corte).
-      </label>
+  <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background-color:#222222;font-family:Arial,sans-serif;color:white;padding:20px;box-sizing:border-box;overflow-y:auto;">
+    <h2 style="margin-top:0;border-bottom:2px solid #ff4444;padding-bottom:10px;font-size:20px;">📋 Paso 3: Aislamiento</h2>
+    <p style="font-size:13px;color:#cccccc;margin-bottom:15px;font-style:italic;">Objetivo: Cortar físicamente el flujo de energía.</p>
+    <form style="font-size:14px;line-height:1.8;">
+      <label style="display:block;margin-bottom:10px;cursor:pointer;"><input type="checkbox" style="transform:scale(1.2);margin-right:8px;vertical-align:middle;"> <strong>Posicionamiento:</strong> Situarse frente al interruptor identificado en el paso anterior.</label>
+      <label style="display:block;margin-bottom:10px;cursor:pointer;"><input type="checkbox" style="transform:scale(1.2);margin-right:8px;vertical-align:middle;"> <strong>Accionar mecanismo:</strong> Bajar la palanca o girar el interruptor a la posición de apagado ("OFF").</label>
+      <label style="display:block;margin-bottom:10px;cursor:pointer;"><input type="checkbox" style="transform:scale(1.2);margin-right:8px;vertical-align:middle;"> <strong>Confirmación sensorial:</strong> Validar el corte mediante el feedback visual (luces apagadas) y auditivo (sonido del corte).</label>
     </form>
   </div>
   `;
@@ -149,31 +104,14 @@ const main = async () => {
   });
   // PASO 4
   const htmlChecklistPaso4 = `
-  <style>html, body { margin: 0; padding: 0; background-color: #222222; overflow: hidden; height: 100%; }</style>
-  <div style="font-family: Arial, sans-serif; padding: 20px; color: white; background-color: #222222; height: 100%; box-sizing: border-box; overflow-y: auto;">
-    <h2 style="margin-top: 0; border-bottom: 2px solid #f1c40f; padding-bottom: 10px; font-size: 20px;">
-      📋 Paso 4: Recolección y Dispositivos de Bloqueo
-    </h2>
-    <p style="font-size: 13px; color: #cccccc; margin-bottom: 15px; font-style: italic;">
-      Objetivo: Obtener las herramientas personales de seguridad.
-    </p>
-    <form style="font-size: 14px; line-height: 1.5;">
-      <label style="display: block; margin-bottom: 10px; cursor: pointer;">
-        <input type="checkbox" style="transform: scale(1.2); margin-right: 8px; vertical-align: middle;"> 
-        <strong>Ir a la estación de bloqueo:</strong> Desplazarse hacia la caja de seguridad amarilla (SafeLockout).
-      </label>
-      <label style="display: block; margin-bottom: 10px; cursor: pointer;">
-        <input type="checkbox" style="transform: scale(1.2); margin-right: 8px; vertical-align: middle;"> 
-        <strong>Tomar pinza múltiple (hasp):</strong> Retirar la pinza de la caja.
-      </label>
-      <label style="display: block; margin-bottom: 10px; cursor: pointer;">
-        <input type="checkbox" style="transform: scale(1.2); margin-right: 8px; vertical-align: middle;"> 
-        <strong>Tomar candado personal:</strong> Retirar el candado asignado al trabajador.
-      </label>
-      <label style="display: block; margin-bottom: 10px; cursor: pointer;">
-        <input type="checkbox" style="transform: scale(1.2); margin-right: 8px; vertical-align: middle;"> 
-        <strong>Tomar tarjeta de peligro:</strong> Retirar la etiqueta y confirmar que los datos (nombre, fecha, motivo) estén visibles.
-      </label>
+  <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background-color:#222222;font-family:Arial,sans-serif;color:white;padding:20px;box-sizing:border-box;overflow-y:auto;">
+    <h2 style="margin-top:0;border-bottom:2px solid #f1c40f;padding-bottom:10px;font-size:20px;">📋 Paso 4: Recolección y Dispositivos de Bloqueo</h2>
+    <p style="font-size:13px;color:#cccccc;margin-bottom:15px;font-style:italic;">Objetivo: Obtener las herramientas personales de seguridad.</p>
+    <form style="font-size:14px;line-height:1.8;">
+      <label style="display:block;margin-bottom:10px;cursor:pointer;"><input type="checkbox" style="transform:scale(1.2);margin-right:8px;vertical-align:middle;"> <strong>Ir a la estación de bloqueo:</strong> Desplazarse hacia la caja de seguridad amarilla (SafeLockout).</label>
+      <label style="display:block;margin-bottom:10px;cursor:pointer;"><input type="checkbox" style="transform:scale(1.2);margin-right:8px;vertical-align:middle;"> <strong>Tomar pinza múltiple (hasp):</strong> Retirar la pinza de la caja.</label>
+      <label style="display:block;margin-bottom:10px;cursor:pointer;"><input type="checkbox" style="transform:scale(1.2);margin-right:8px;vertical-align:middle;"> <strong>Tomar candado personal:</strong> Retirar el candado asignado al trabajador.</label>
+      <label style="display:block;margin-bottom:10px;cursor:pointer;"><input type="checkbox" style="transform:scale(1.2);margin-right:8px;vertical-align:middle;"> <strong>Tomar tarjeta de peligro:</strong> Retirar la etiqueta y confirmar que los datos (nombre, fecha, motivo) estén visibles.</label>
     </form>
   </div>
   `;
@@ -188,31 +126,14 @@ const main = async () => {
   });
   // PASO 5
   const htmlChecklistPaso5 = `
-  <style>html, body { margin: 0; padding: 0; background-color: #222222; overflow: hidden; height: 100%; }</style>
-  <div style="font-family: Arial, sans-serif; padding: 20px; color: white; background-color: #222222; height: 100%; box-sizing: border-box; overflow-y: auto;">
-    <h2 style="margin-top: 0; border-bottom: 2px solid #2ecc71; padding-bottom: 10px; font-size: 20px;">
-      📋 Paso 5: Bloqueo y Etiquetado
-    </h2>
-    <p style="font-size: 13px; color: #cccccc; margin-bottom: 15px; font-style: italic;">
-      Objetivo: Bloquear físicamente el interruptor para que nadie pueda encenderlo por error.
-    </p>
-    <form style="font-size: 14px; line-height: 1.5;">
-      <label style="display: block; margin-bottom: 10px; cursor: pointer;">
-        <input type="checkbox" style="transform: scale(1.2); margin-right: 8px; vertical-align: middle;"> 
-        <strong>Regresar al punto de corte:</strong> Volver al tablero aislado en el Paso 3.
-      </label>
-      <label style="display: block; margin-bottom: 10px; cursor: pointer;">
-        <input type="checkbox" style="transform: scale(1.2); margin-right: 8px; vertical-align: middle;"> 
-        <strong>Instalar pinza:</strong> Colocar la pinza en los orificios de bloqueo de la palanca.
-      </label>
-      <label style="display: block; margin-bottom: 10px; cursor: pointer;">
-        <input type="checkbox" style="transform: scale(1.2); margin-right: 8px; vertical-align: middle;"> 
-        <strong>Instalar candado:</strong> Insertar el candado cerrando la pinza.
-      </label>
-      <label style="display: block; margin-bottom: 10px; cursor: pointer;">
-        <input type="checkbox" style="transform: scale(1.2); margin-right: 8px; vertical-align: middle;"> 
-        <strong>Instalar tarjeta:</strong> Enganchar la tarjeta de advertencia de "PELIGRO" junto al candado.
-      </label>
+  <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background-color:#222222;font-family:Arial,sans-serif;color:white;padding:20px;box-sizing:border-box;overflow-y:auto;">
+    <h2 style="margin-top:0;border-bottom:2px solid #2ecc71;padding-bottom:10px;font-size:20px;">📋 Paso 5: Bloqueo y Etiquetado</h2>
+    <p style="font-size:13px;color:#cccccc;margin-bottom:15px;font-style:italic;">Objetivo: Bloquear físicamente el interruptor para que nadie pueda encenderlo por error.</p>
+    <form style="font-size:14px;line-height:1.8;">
+      <label style="display:block;margin-bottom:10px;cursor:pointer;"><input type="checkbox" style="transform:scale(1.2);margin-right:8px;vertical-align:middle;"> <strong>Regresar al punto de corte:</strong> Volver al tablero aislado en el Paso 3.</label>
+      <label style="display:block;margin-bottom:10px;cursor:pointer;"><input type="checkbox" style="transform:scale(1.2);margin-right:8px;vertical-align:middle;"> <strong>Instalar pinza:</strong> Colocar la pinza en los orificios de bloqueo de la palanca.</label>
+      <label style="display:block;margin-bottom:10px;cursor:pointer;"><input type="checkbox" style="transform:scale(1.2);margin-right:8px;vertical-align:middle;"> <strong>Instalar candado:</strong> Insertar el candado cerrando la pinza.</label>
+      <label style="display:block;margin-bottom:10px;cursor:pointer;"><input type="checkbox" style="transform:scale(1.2);margin-right:8px;vertical-align:middle;"> <strong>Instalar tarjeta:</strong> Enganchar la tarjeta de advertencia de "PELIGRO" junto al candado.</label>
     </form>
   </div>
   `;
