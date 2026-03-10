@@ -40,7 +40,8 @@ const main = async () => {
 
   // PASO 1
   const htmlChecklistPaso1 = `
-  <div style="font-family: Arial, sans-serif; padding: 20px; color: white; height: 100%; box-sizing: border-box;">
+  <style>html, body { margin: 0; padding: 0; background-color: #222222; overflow: hidden; height: 100%; }</style>
+  <div style="font-family: Arial, sans-serif; padding: 20px; color: white; background-color: #222222; height: 100%; box-sizing: border-box; overflow-y: auto;">
     <h2 style="margin-top: 0; border-bottom: 2px solid #ffaa00; padding-bottom: 10px; font-size: 20px;">
       📋 Paso 1: Notificación y Autorización
     </h2>
@@ -78,7 +79,8 @@ const main = async () => {
   });
   // PASO 2
   const htmlChecklistPaso2 = `
-  <div style="font-family: Arial, sans-serif; padding: 20px; color: white; height: 100%; box-sizing: border-box;">
+  <style>html, body { margin: 0; padding: 0; background-color: #222222; overflow: hidden; height: 100%; }</style>
+  <div style="font-family: Arial, sans-serif; padding: 20px; color: white; background-color: #222222; height: 100%; box-sizing: border-box; overflow-y: auto;">
     <h2 style="margin-top: 0; border-bottom: 2px solid #00aaff; padding-bottom: 10px; font-size: 20px;">
       📋 Paso 2: Identificación de Fuentes de Energía
     </h2>
@@ -112,7 +114,8 @@ const main = async () => {
   });
   // PASO 3
   const htmlChecklistPaso3 = `
-  <div style="font-family: Arial, sans-serif; padding: 20px; color: white; height: 100%; box-sizing: border-box;">
+  <style>html, body { margin: 0; padding: 0; background-color: #222222; overflow: hidden; height: 100%; }</style>
+  <div style="font-family: Arial, sans-serif; padding: 20px; color: white; background-color: #222222; height: 100%; box-sizing: border-box; overflow-y: auto;">
     <h2 style="margin-top: 0; border-bottom: 2px solid #ff4444; padding-bottom: 10px; font-size: 20px;">
       📋 Paso 3: Aislamiento
     </h2>
@@ -146,7 +149,8 @@ const main = async () => {
   });
   // PASO 4
   const htmlChecklistPaso4 = `
-  <div style="font-family: Arial, sans-serif; padding: 20px; color: white; height: 100%; box-sizing: border-box;">
+  <style>html, body { margin: 0; padding: 0; background-color: #222222; overflow: hidden; height: 100%; }</style>
+  <div style="font-family: Arial, sans-serif; padding: 20px; color: white; background-color: #222222; height: 100%; box-sizing: border-box; overflow-y: auto;">
     <h2 style="margin-top: 0; border-bottom: 2px solid #f1c40f; padding-bottom: 10px; font-size: 20px;">
       📋 Paso 4: Recolección y Dispositivos de Bloqueo
     </h2>
@@ -184,7 +188,8 @@ const main = async () => {
   });
   // PASO 5
   const htmlChecklistPaso5 = `
-  <div style="font-family: Arial, sans-serif; padding: 20px; color: white; height: 100%; box-sizing: border-box;">
+  <style>html, body { margin: 0; padding: 0; background-color: #222222; overflow: hidden; height: 100%; }</style>
+  <div style="font-family: Arial, sans-serif; padding: 20px; color: white; background-color: #222222; height: 100%; box-sizing: border-box; overflow-y: auto;">
     <h2 style="margin-top: 0; border-bottom: 2px solid #2ecc71; padding-bottom: 10px; font-size: 20px;">
       📋 Paso 5: Bloqueo y Etiquetado
     </h2>
