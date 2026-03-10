@@ -72,6 +72,8 @@ const main = async () => {
     label: "Paso 1: Notificación",
     anchorPosition: { x: -20.1439173752873, y: 1.405418092471173, z: 1.722705161011619 },
     stemVector: { x: 0.3, y: 0, z: 0 },
+    color: { r: 1.0, g: 0.596, b: 0.0 }, // Orange
+    iconId: 'public_characters_1',
     attachments: [checklistPaso1SandboxId]
   });
   // PASO 2
@@ -104,6 +106,8 @@ const main = async () => {
     label: "Paso 2: Identificación",
     anchorPosition: { x: -18.9632054059643, y: 1.230397616938383, z: -2.285493963118637 },
     stemVector: { x: 0, y: 0, z: 0.3 },
+    color: { r: 0.012, g: 0.663, b: 0.957 }, // Light Blue
+    iconId: 'public_characters_2',
     attachments: [checklistPaso2SandboxId]
   });
   // PASO 3
@@ -136,6 +140,8 @@ const main = async () => {
     label: "Paso 3: Aislamiento",
     anchorPosition: { x: -18.034426838887985, y: 1.222983537795993, z: -2.281127506949742 },
     stemVector: { x: 0, y: 0, z: 0.3 },
+    color: { r: 0.957, g: 0.263, b: 0.212 }, // Red
+    iconId: 'public_characters_3',
     attachments: [checklistPaso3SandboxId]
   });
   // PASO 4
@@ -172,6 +178,8 @@ const main = async () => {
     label: "Paso 4: Recolección y Etiquetas",
     anchorPosition: { x: -12.623932290521346, y: 0.867121838449943, z: -2.625850974736056 },
     stemVector: { x: -0.3, y: 0, z: 0 },
+    color: { r: 0.945, g: 0.769, b: 0.059 }, // Yellow
+    iconId: 'public_characters_4',
     attachments: [checklistPaso4SandboxId]
   });
   // PASO 5
@@ -208,6 +216,8 @@ const main = async () => {
     label: "Paso 5: Bloqueo y Etiquetado",
     anchorPosition: { x: -17.48982384704301, y: 1.2687677861740818, z: -2.3042635948142762 },
     stemVector: { x: 0, y: 0, z: 0.3 },
+    color: { r: 0.298, g: 0.686, b: 0.314 }, // Green
+    iconId: 'public_characters_5',
     attachments: [checklistPaso5SandboxId]
   });
 
