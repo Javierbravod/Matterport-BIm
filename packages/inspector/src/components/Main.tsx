@@ -122,7 +122,7 @@ export class MainView extends Component<Props, State> {
 
     const urlParams = new URLSearchParams(window.location.search);
     if (!urlParams.has('m')) {
-      urlParams.set('m', 'j4RZx7ZGM6T');
+      urlParams.set('m', 'hXEV8zd9GFy');
     }
     // ensure applicationKey is inserted into the bundle query string
     if (!urlParams.has('applicationKey')) {

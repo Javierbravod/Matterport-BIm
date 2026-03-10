@@ -16,7 +16,7 @@ export class SetModel extends Component<Props, State> {
 
     this.state = {
       name: '',
-      sid: 'j4RZx7ZGM6T',
+      sid: 'hXEV8zd9GFy',
     };
 
     this.onNameChanged = this.onNameChanged.bind(this);

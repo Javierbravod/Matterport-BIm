@@ -30,7 +30,7 @@ export async function connect(options: ConnectOptions = {}): Promise<any> {
   }
 
   if (!urlParams.has('m')) {
-    urlParams.set('m', 'j4RZx7ZGM6T');
+    urlParams.set('m', 'hXEV8zd9GFy');
   }
 
   const iframe = document.getElementById('sdk-frame') as HTMLIFrameElement;

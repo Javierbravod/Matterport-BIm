@@ -123,7 +123,7 @@ module.exports = function (config) {
     },
     plugins: computePlugins(),
     devServer: {
-      port: 8000,
+      port: 7000,
       static: path.join(__dirname, 'dist'),
       devMiddleware: {
         writeToDisk: true,
